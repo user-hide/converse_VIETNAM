@@ -2,4 +2,4 @@
 # kiến thức cần có
 - HTML
 - CSS
-* Đang trong giai đoạn phát triển.
+. Đang trong giai đoạn phát triển.
