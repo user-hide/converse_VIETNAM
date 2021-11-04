@@ -1,4 +1,5 @@
 :root {
+    --prymary-color: #505050;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #CBCBCB;
@@ -29,3 +30,13 @@ html {
     display: flex;
     flex-wrap: wrap;
 }   
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
