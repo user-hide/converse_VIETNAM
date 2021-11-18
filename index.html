@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="shortcut icon" href="./assets/img/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,8 +17,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">  
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--saparate">
                             Vào cửa hàng trên ứng dụng Converse VIETNAM
@@ -121,11 +123,17 @@
 
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <img class="header__logo-img" src="./assets/img/logo/logoConverse.png" alt="Logo Converse VIETNAM">
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -321,12 +329,26 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-item-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-item-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-item-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-item-link">Giá</a>
+                </li>
+            </ul>
         </header>   
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="catergory">
                             <h3 class="catergory__heading">Danh mục</h3>
             
@@ -353,8 +375,8 @@
                         </nav>
                     </div>
     
-                    <div class="gird__column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__lable">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -390,10 +412,45 @@
                             </div>
                         </div>
 
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">SNEAKERS</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">APPAREL</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">ACCESS SORIES</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">NEW</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">SALE</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">PRIDE</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">KEITH HARING</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">RENEW</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">CLASSIC</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">CHUCK 70 S</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="grid__row home-product-item-wrapper">
+                            <div class="row sm-gutter home-product-item-wrapper">
                                 <!-- Product item -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/chuckTaylor1.png);"></div>
                                         <h4 class="home-product-item__name">Chuck Taylor All Star My Story Low-Top</h4>
@@ -429,7 +486,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/chuckTaylor2.png);"></div>
                                         <h4 class="home-product-item__name">Chuck Taylor All Star Lift Hybrid Floral</h4>
@@ -465,7 +522,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/chuckTaylor3.png);"></div>
                                         <h4 class="home-product-item__name">Chuck 70 Seasonal Color Vintage Canvas Hi Top</h4>
@@ -501,7 +558,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/chuckTaylor4.png);"></div>
                                         <h4 class="home-product-item__name">Chuck 70 My Story High-Top</h4>
@@ -537,7 +594,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/chuckTaylor5.png);"></div>
                                         <h4 class="home-product-item__name">Chuck 70 Patchwork Nu-Madic High-Top [Limited Edition]</h4>
@@ -573,7 +630,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/bag1.png);"></div>
                                         <h4 class="home-product-item__name">Go Lo Backpack</h4>
@@ -609,7 +666,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/bag2.png);"></div>
                                         <h4 class="home-product-item__name">Straight Edge Backpack</h4>
@@ -645,7 +702,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/bag3.png);"></div>
                                         <h4 class="home-product-item__name">Straight Edge Backpack</h4>
@@ -681,7 +738,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/bag4.png);"></div>
                                         <h4 class="home-product-item__name">Go Lo Backpack Festival</h4>
@@ -717,7 +774,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/shoe/bag5.png);"></div>
                                         <h4 class="home-product-item__name">Converse Rucksack</h4>
@@ -796,9 +853,9 @@
 
         <footer class="footer">
             <div class="footer-wrapper">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="grid__row">
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Women</h3>
                             <ul class="footer__list">
                                 <li class="footer-item">
@@ -821,7 +878,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Men</h3>
                             <ul class="footer__list">
                                 <li class="footer-item">
@@ -844,7 +901,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Kids</h3>
                             <ul class="footer__list">
                                 <li class="footer-item">
@@ -864,7 +921,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Theo dõi</h3>
                             <ul class="footer__list">
                                 <li class="footer-item">
@@ -887,7 +944,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Công ty tinh thương mại CONVERSE VIETNAM</h3>
                             <ul class="footer__list">
                                 <li class="footer-item">
@@ -908,7 +965,7 @@
                                 <li class="footer-item">
                                     <a href="mailto:converser@gmail.converse.com" class="footer-item__link">
                                         <i class="footer-item__icon far fa-envelope"></i>
-                                        converser@gmail.converse.com
+                                        converser@gmail.com
                                     </a>
                                 </li>
                                 <li class="footer-item">
@@ -924,7 +981,7 @@
             </div>
 
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">2021 © CONVERSE VIETNAM. ALL RIGHTS RESERVED.</p>
                 </div>
             </div>
