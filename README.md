@@ -2,4 +2,6 @@
 # kiến thức cần có
 - HTML
 - CSS
-# Đang trong giai đoạn phát triển.
+- Responsive web design
+- Gird system
+* Link demo: https://user-hide.github.io/converse_VIETNAM/
